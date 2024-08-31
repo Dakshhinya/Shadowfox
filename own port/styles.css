@@ -1,0 +1,403 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    padding-top: 70px; /* Adjust for the fixed navbar height */
+    scroll-padding-top: 70px; /* Ensures content is not hidden behind the fixed navbar */
+}
+/* Light Mode Styles */
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.light-mode #theme-toggle i {
+    color: #f39c12; /* Sun color for light mode */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.dark-mode #theme-toggle i {
+    color: #f1c40f; /* Sun color for dark mode */
+}
+
+/* Navbar Customization */
+.navbar-light.bg-light {
+    background-color: #f8f9fa !important;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000000;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+body.dark-mode .navbar-light {
+    background-color: #343a40 !important;
+    border-bottom: 1px solid #444;
+    box-shadow: 0 4px 6px rgba(255, 0, 0, 0.4); /* Red shadow for dark mode */
+}
+
+body.dark-mode .navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-nav {
+    justify-content: center;
+    width: 150%;
+}
+
+#theme-toggle {
+    cursor: pointer;
+    margin-left: auto;
+}
+
+#theme-toggle i {
+    font-size: 24px; 
+    color: inherit;
+}
+
+#theme-toggle {
+    background-color: transparent;
+    border: none; 
+    padding: 0;
+    outline: none; 
+    margin-left: auto; 
+}
+
+#theme-toggle:hover i {
+    color: #f39c12; 
+}
+
+#home p {
+    text-align: justify;
+}
+
+/* Home Image Styling */
+#home img {
+    width: 300px !important; /* Ensure the size is applied */
+    height: 300px !important; /* Ensure the size is applied */
+    object-fit: cover; /* Ensures the image covers the space */
+    border-radius: 50%; /* Makes the image circular */
+    border: 2px solid #ddd; /* Light border for the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light mode shadow */
+}
+
+/* Dark Mode Home Image Styling */
+body.dark-mode #home img {
+    box-shadow: 0 20px 30px rgba(255, 0, 0, 0.6) !important; /* Thicker red shadow for dark mode */
+}
+
+#home h1, #home h3 {
+    text-align: left; 
+}
+
+#home p {
+    text-align: left; 
+    margin-top: 20px;
+}
+/* Dark Mode Navbar Customization */
+body.dark-mode .navbar {
+    background-color: #000000 !important; /* Black background for dark mode */
+    border-bottom: 1px solid #444;
+    box-shadow: 0 8px 12px rgba(255, 0, 0, 0.6) !important; /* Thicker red shadow for dark mode */
+}
+
+body.dark-mode .navbar-light .navbar-nav .nav-link {
+    color: #ffffff; /* White color for navigation links in dark mode */
+}
+
+/* Ensure the photo is correctly aligned */
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
+
+
+/* Project Box Styles */
+.project-box {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 0; /* No padding needed for the project box */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 200px; /* Set a height for the project box */
+}
+
+/* Image Styling */
+.project-image {
+    background-size: cover;
+    background-position: center;
+    height: 100%; /* Fill the height of the project box */
+    width: 100%;
+}
+
+/* Hide project title by default */
+.box-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+/* Show project title on hover */
+.project-box:hover .box-content {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* Project title styling */
+.box-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Light Mode Project Box */
+body.light-mode .project-box {
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .box-title {
+    color: #000000; /* Dark color for light mode */
+}
+
+/* Dark Mode Project Box */
+body.dark-mode .project-box {
+    background-color: #343a40;
+    box-shadow: 0 4px 6px rgba(255, 0, 0, 0.4);
+}
+
+body.dark-mode .box-title {
+    color: hsl(0, 0%, 5%); /* Light color for dark mode */
+}
+
+/* Navbar Customization */
+
+.navbar {
+    padding: 1rem 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light mode shadow */
+    position: fixed; /* Fixed position for the navbar */
+    top: 0; /* Align at the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+body {
+    padding-top: 70px; /* Adjust for the fixed navbar height */
+}
+body.dark-mode .navbar {
+    background-color: #343a40 !important;
+    border-bottom: 1px solid #444;
+    box-shadow: 0 8px 12px rgba(255, 0, 0, 0.6) !important; /* Thicker red shadow for dark mode */
+}
+
+body.dark-mode .navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+}
+/* Dark Mode Navbar Customization */
+body.dark-mode .navbar {
+    background-color: #343a40 !important;
+    border-bottom: 1px solid #444;
+    box-shadow: 0 8px 12px rgba(255, 0, 0, 0.6) !important; /* Thicker red shadow for dark mode */
+}
+
+#home img {
+    width: 150px;  
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light mode shadow */
+}
+
+
+body.dark-mode #home img {
+    box-shadow: 0 20px 25px rgba(255, 0, 0, 0.4) !important; /* Red shadow for dark mode */
+}
+/* Personal Project Box Styles */
+/* Personal Project Box Styles */
+.personal-project-box {
+    border-radius: 10px;
+    margin: 15px;
+    padding: 10px;
+    background-color: #f8f9fa; /* Light background for personal projects */
+    box-shadow: 0 2px 4px rgba(255, 0, 0, 0.3); /* Red shadow for light mode */
+    height: auto; /* Auto height for smaller boxes */
+}
+
+/* Personal Project Title Styling */
+.personal-box-content {
+    display: block;
+    text-decoration: none;
+    color: #000; /* Black color for text */
+    text-align: center;
+}
+
+/* Project title styling */
+.box-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000; /* Black color for personal projects */
+}
+
+/* Dark Mode Personal Project Box */
+body.dark-mode .personal-project-box {
+    background-color: #343a40; /* Dark background for dark mode */
+    box-shadow: 0 2px 4px rgba(255, 0, 0, 0.5); /* Red shadow for dark mode */
+}
+
+body.dark-mode .personal-box-content {
+    color: #ffffff; /* White color for text in dark mode */
+}
+/* Internship Box Styles */
+.internship-box {
+    border-radius: 15px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background for internships in light mode */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto; /* Auto height for the box */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+/* Internship Box Content */
+.internship-box-content {
+    display: block;
+    text-decoration: none; /* No underline by default */
+    color: #000; /* Black color for text in light mode */
+}
+
+/* Internship Title Styling */
+.internship-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px; /* Add space below the title */
+}
+
+/* Remove underline from the paragraph and ensure no underline on hover */
+.internship-description {
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none; /* Ensure no underline on the description */
+}
+
+/* Hover Effect for Internship Box */
+.internship-box:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #e9ecef; /* Slightly darker background on hover in light mode */
+}
+
+/* Dark Mode Styles for Internship Box */
+body.dark-mode .internship-box {
+    background-color: #343a40; /* Dark background for internships in dark mode */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Light shadow for dark mode */
+}
+
+body.dark-mode .internship-box-content {
+    color: #ffffff; /* White color for text in dark mode */
+}
+
+body.dark-mode .internship-title {
+    color: #ffffff; /* White color for title in dark mode */
+}
+
+body.dark-mode .internship-description {
+    color: #ddd; /* Light gray color for description in dark mode */
+}
+
+/* Dark Mode Hover Effect for Internship Box */
+body.dark-mode .internship-box:hover {
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+    background-color: #495057; /* Slightly lighter background on hover in dark mode */
+}
+
+/* Education Box Styles */
+.education-box {
+    border-radius: 15px;
+    margin: 15px;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background for education boxes in light mode */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Education Title Styling */
+.education-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #000; /* Black color for title in light mode */
+}
+
+/* Education Description Styling */
+.education-description {
+    font-size: 1rem;
+    color: #333; /* Dark gray color for text in light mode */
+}
+
+/* Dark Mode Education Box Styles */
+body.dark-mode .education-box {
+    background-color: #343a40; /* Dark background for education boxes in dark mode */
+    box-shadow: 0 2px 4px rgba(255, 0, 0, 0.3); /* Red shadow for dark mode */
+}
+
+body.dark-mode .education-title {
+    color: #ffffff; /* White color for title in dark mode */
+}
+
+body.dark-mode .education-description {
+    color: #ddd; /* Light gray color for text in dark mode */
+}
+/* Navbar photo styling */
+.navbar-logo {
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Maintain aspect ratio */
+    border-radius: 50%; /* Optional: makes the image circular */
+    object-fit: cover; /* Ensures the image covers the space */
+    margin-right: 10px; /* Space between the image and navbar items */
+    border: none; /* Removes any border */
+}
+
+/* Ensure the photo is correctly aligned */
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+.course-box {
+    background: linear-gradient(135deg, #e0f7fa, #edf0ed);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    color: black;
+    font-size: 1.2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 10px; /* Space between icon and text */
+}
+
+.course-box i {
+    font-size: 2em; /* Adjust icon size */
+}
+
+.course-title {
+    font-size: 1.5em;
+    margin: 0; /* Remove default margin */
+}
